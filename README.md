@@ -6,7 +6,7 @@ SICP
 
 This is a new HTML5 and EPUB3 version of "Structure and Interpretation of Computer Programs" by Abelson, Sussman, and Sussman. It comes from the lineage of [Unofficial Texinfo Format](http://www.neilvandyke.org/sicp-texi/) that was converted from the original [HTML version](http://mitpress.mit.edu/sicp/) at The MIT Press.
 
-<b>The book in EPUB3 format: [sicp.epub](https://drive.google.com/file/d/0B-2S-gwdOpdaTFJVZEdHbS1Td0U/edit?usp=sharing)</b>
+<b>The book in EPUB3 format: [sicp.epub](https://www.dropbox.com/s/y9jt5kmabt02yg8/sicp.epub?dl=0)</b>
 
 Modern solutions such as scalable vector graphics, mathematical markup with MathML and MathJax, embedded web fonts, and syntax highlighting are used. Rudimentary scaffolding for responsive design is in place, which adapts the page for viewing on pocket devices and tablets. More tests on small screens are needed to adjust the font size and formatting, so I encourage feedback from smartphone and tablet owners.
 
@@ -31,11 +31,13 @@ Acknowledgements
 * Gavrie Philipson
 * Li Xuanji
 * J. E. Johnson
+* Matt Iversen
+* Eugene Sharygin
 
 License
 -------
 
-The source file `sicp-pocket.texi,` the HTML content of the book, and the diagrams in directory `html/fig` are licensed under Creative Commons Attribution-ShareAlike 3.0 Unported License ([cc by-sa](http://creativecommons.org/licenses/by-sa/3.0/)).
+The source file `sicp-pocket.texi,` HTML content of the book, and diagrams in directory `html/fig` are licensed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License ([cc by-nc-sa](http://creativecommons.org/licenses/by-nc-sa/3.0/)).
           
 Most of the scripts are licensed under GNU General Public License version 3 (for details, see LICENSE.src).
 

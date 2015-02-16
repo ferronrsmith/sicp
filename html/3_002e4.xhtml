@@ -26,7 +26,7 @@
 </head>
 
 <body>
-<section><a id="g_t3_002e4"></a>
+<section><span class="top jump" title="Jump to top"><a href="#pagetop" accesskey="t">⇡</a></span><a id="pagetop"></a><a id="g_t3_002e4"></a>
 <nav class="header">
 <p>
 Next: <a href="3_002e5.xhtml#g_t3_002e5" accesskey="n" rel="next">3.5</a>, Prev: <a href="3_002e3.xhtml#g_t3_002e3" accesskey="p" rel="prev">3.3</a>, Up: <a href="Chapter-3.xhtml#Chapter-3" accesskey="u" rel="prev">Chapter 3</a>   [<a href="index.xhtml#SEC_Contents" title="Table of contents" accesskey="c" rel="contents">Contents</a>]</p>
@@ -695,32 +695,62 @@ follows:<a class="footnote_link" id="DOCF169" href="#FOOT169"><sup>169</sup></a>
 <p>This procedure works well when only a single process is trying to do the
 exchange.  Suppose, however, that Peter and Paul both have access to accounts
 <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow class="MJX-TeXAtom-ORD">
   <mi>a</mi>
-</math>1, <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mn>1</mn>
+</mrow>
+</math>, <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow class="MJX-TeXAtom-ORD">
   <mi>a</mi>
-</math>2, and <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mn>2</mn>
+</mrow>
+</math>, and <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow class="MJX-TeXAtom-ORD">
   <mi>a</mi>
-</math>3, and that Peter exchanges <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mn>3</mn>
+</mrow>
+</math>, and that Peter exchanges <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow class="MJX-TeXAtom-ORD">
   <mi>a</mi>
-</math>1 and <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mn>1</mn>
+</mrow>
+</math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow class="MJX-TeXAtom-ORD">
   <mi>a</mi>
-</math>2 while
+  <mn>2</mn>
+</mrow>
+</math> while
 Paul concurrently exchanges <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow class="MJX-TeXAtom-ORD">
   <mi>a</mi>
-</math>1 and <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mn>1</mn>
+</mrow>
+</math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow class="MJX-TeXAtom-ORD">
   <mi>a</mi>
-</math>3.  Even with account deposits and
+  <mn>3</mn>
+</mrow>
+</math>.  Even with account deposits and
 withdrawals serialized for individual accounts (as in the <code>make-account</code>
 procedure shown above in this section), <code>exchange</code> can still produce
 incorrect results.  For example, Peter might compute the difference in the
 balances for <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow class="MJX-TeXAtom-ORD">
   <mi>a</mi>
-</math>1 and <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mn>1</mn>
+</mrow>
+</math> and <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow class="MJX-TeXAtom-ORD">
   <mi>a</mi>
-</math>2, but then Paul might change the balance in
+  <mn>2</mn>
+</mrow>
+</math>, but then Paul might change the balance in
 <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow class="MJX-TeXAtom-ORD">
   <mi>a</mi>
-</math>1 before Peter is able to complete the exchange.<a class="footnote_link" id="DOCF170" href="#FOOT170"><sup>170</sup></a>  For correct behavior, we must arrange for the
+  <mn>1</mn>
+</mrow>
+</math> before Peter is able to complete the exchange.<a class="footnote_link" id="DOCF170" href="#FOOT170"><sup>170</sup></a>  For correct behavior, we must arrange for the
 <code>exchange</code> procedure to lock out any other concurrent accesses to the
 accounts during the entire time of the exchange.
 </p>
@@ -979,31 +1009,58 @@ semaphore must wait for release operations.  Give implementations of semaphores
 <p>Now that we have seen how to implement serializers, we can see that account
 exchanging still has a problem, even with the <code>serialized-exchange</code>
 procedure above.  Imagine that Peter attempts to exchange <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow class="MJX-TeXAtom-ORD">
   <mi>a</mi>
-</math>1 with <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mn>1</mn>
+</mrow>
+</math> with <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow class="MJX-TeXAtom-ORD">
   <mi>a</mi>
-</math>2
+  <mn>2</mn>
+</mrow>
+</math>
 while Paul concurrently attempts to exchange <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow class="MJX-TeXAtom-ORD">
   <mi>a</mi>
-</math>2 with <math xmlns="http://www.w3.org/1998/Math/MathML">
+  <mn>2</mn>
+</mrow>
+</math> with <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow class="MJX-TeXAtom-ORD">
   <mi>a</mi>
-</math>1.  Suppose that
+  <mn>1</mn>
+</mrow>
+</math>.  Suppose that
 Peter’s process reaches the point where it has entered a serialized procedure
 protecting <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow class="MJX-TeXAtom-ORD">
   <mi>a</mi>
-</math>1 and, just after that, Paul’s process enters a serialized
+  <mn>1</mn>
+</mrow>
+</math> and, just after that, Paul’s process enters a serialized
 procedure protecting <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow class="MJX-TeXAtom-ORD">
   <mi>a</mi>
-</math>2.  Now Peter cannot proceed (to enter a serialized
+  <mn>2</mn>
+</mrow>
+</math>.  Now Peter cannot proceed (to enter a serialized
 procedure protecting <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow class="MJX-TeXAtom-ORD">
   <mi>a</mi>
-</math>2) until Paul exits the serialized procedure
+  <mn>2</mn>
+</mrow>
+</math>) until Paul exits the serialized procedure
 protecting <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow class="MJX-TeXAtom-ORD">
   <mi>a</mi>
-</math>2.  Similarly, Paul cannot proceed until Peter exits the
+  <mn>2</mn>
+</mrow>
+</math>.  Similarly, Paul cannot proceed until Peter exits the
 serialized procedure protecting <math xmlns="http://www.w3.org/1998/Math/MathML">
+<mrow class="MJX-TeXAtom-ORD">
   <mi>a</mi>
-</math>1.  Each process is stalled forever,
+  <mn>1</mn>
+</mrow>
+</math>.  Each process is stalled forever,
 waiting for the other.  This situation is called a <a id="index-deadlock"></a>
 <em>deadlock</em>.
 Deadlock is always a danger in systems that provide concurrent access to
@@ -1256,6 +1313,6 @@ Next: <a href="3_002e5.xhtml#g_t3_002e5" accesskey="n" rel="next">3.5</a>, Prev:
 </nav>
 
 
-</section>
+</section><span class="bottom jump" title="Jump to bottom"><a href="#pagebottom" accesskey="b">⇣</a></span><a id="pagebottom"></a>
 </body>
 </html>

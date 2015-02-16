@@ -26,7 +26,7 @@
 </head>
 
 <body>
-<section><a id="g_t4_002e2"></a>
+<section><span class="top jump" title="Jump to top"><a href="#pagetop" accesskey="t">⇡</a></span><a id="pagetop"></a><a id="g_t4_002e2"></a>
 <nav class="header">
 <p>
 Next: <a href="4_002e3.xhtml#g_t4_002e3" accesskey="n" rel="next">4.3</a>, Prev: <a href="4_002e1.xhtml#g_t4_002e1" accesskey="p" rel="prev">4.1</a>, Up: <a href="Chapter-4.xhtml#Chapter-4" accesskey="u" rel="prev">Chapter 4</a>   [<a href="index.xhtml#SEC_Contents" title="Table of contents" accesskey="c" rel="contents">Contents</a>]</p>
@@ -369,9 +369,10 @@ evaluated.<a class="footnote_link" id="DOCF241" href="#FOOT241"><sup>241</sup></
 
 </span><span class="opn">(</span><span class="kwd">define</span><span class="pln"> </span><span class="opn">(</span><span class="pln">force-it obj</span><span class="clo">)</span><span class="pln">
   </span><span class="opn">(</span><span class="kwd">cond</span><span class="pln"> </span><span class="opn">((</span><span class="pln">thunk? obj</span><span class="clo">)</span><span class="pln">
-         </span><span class="opn">(</span><span class="kwd">let</span><span class="pln"> </span><span class="opn">((</span><span class="pln">result </span><span class="opn">(</span><span class="pln">actual-value 
-                        </span><span class="opn">(</span><span class="pln">thunk-exp obj</span><span class="clo">)</span><span class="pln">
-                        </span><span class="opn">(</span><span class="pln">thunk-env obj</span><span class="clo">))))</span><span class="pln">
+         </span><span class="opn">(</span><span class="kwd">let</span><span class="pln"> </span><span class="opn">((</span><span class="pln">result
+                </span><span class="opn">(</span><span class="pln">actual-value 
+                 </span><span class="opn">(</span><span class="pln">thunk-exp obj</span><span class="clo">)</span><span class="pln">
+                 </span><span class="opn">(</span><span class="pln">thunk-env obj</span><span class="clo">))))</span><span class="pln">
            </span><span class="opn">(</span><span class="pln">set-car! obj </span><span class="lit">'evaluated-thunk</span><span class="clo">)</span><span class="pln">
            </span><span class="com">;; </span><span class="roman"><span class="com">replace </span><code><span class="com">exp</span></code><span class="com"> with its value:</span></span><span class="pln">
            </span><span class="opn">(</span><span class="pln">set-car! </span><span class="opn">(</span><span class="kwd">cdr</span><span class="pln"> obj</span><span class="clo">)</span><span class="pln"> result</span><span class="clo">)</span><span class="pln"> 
@@ -611,8 +612,9 @@ examples:
         </span><span class="opn">((</span><span class="pln">null? list2</span><span class="clo">)</span><span class="pln"> list1</span><span class="clo">)</span><span class="pln">
         </span><span class="opn">(</span><span class="kwd">else</span><span class="pln"> </span><span class="opn">(</span><span class="kwd">cons</span><span class="pln"> </span><span class="opn">(</span><span class="pun">+</span><span class="pln"> </span><span class="opn">(</span><span class="kwd">car</span><span class="pln"> list1</span><span class="clo">)</span><span class="pln"> 
                        </span><span class="opn">(</span><span class="kwd">car</span><span class="pln"> list2</span><span class="clo">))</span><span class="pln">
-                    </span><span class="opn">(</span><span class="pln">add-lists </span><span class="opn">(</span><span class="kwd">cdr</span><span class="pln"> list1</span><span class="clo">)</span><span class="pln"> 
-                               </span><span class="opn">(</span><span class="kwd">cdr</span><span class="pln"> list2</span><span class="clo">))))))</span><span class="pln">
+                    </span><span class="opn">(</span><span class="pln">add-lists
+                     </span><span class="opn">(</span><span class="kwd">cdr</span><span class="pln"> list1</span><span class="clo">)</span><span class="pln"> 
+                     </span><span class="opn">(</span><span class="kwd">cdr</span><span class="pln"> list2</span><span class="clo">))))))</span><span class="pln">
 
 </span><span class="opn">(</span><span class="kwd">define</span><span class="pln"> ones </span><span class="opn">(</span><span class="kwd">cons</span><span class="pln"> </span><span class="lit">1</span><span class="pln"> ones</span><span class="clo">))</span><span class="pln">
 
@@ -792,6 +794,6 @@ Next: <a href="4_002e3.xhtml#g_t4_002e3" accesskey="n" rel="next">4.3</a>, Prev:
 </nav>
 
 
-</section>
+</section><span class="bottom jump" title="Jump to bottom"><a href="#pagebottom" accesskey="b">⇣</a></span><a id="pagebottom"></a>
 </body>
 </html>
